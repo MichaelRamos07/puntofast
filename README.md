@@ -1,6 +1,7 @@
 PuntoFast - Sistema de Punto de Venta
 Descripción del Proyecto
-PuntoFast es un sistema de punto de venta desarrollado en lenguaje C para la gestión de inventario, ventas y reportes de un establecimiento comercial. El sistema cuenta con diferentes niveles de acceso (administrador y vendedor) y funcionalidades robustas para la gestión de productos, facturación e inventario.
+PuntoFast es un sistema de punto de venta desarrollado en lenguaje C para la gestión de inventario, ventas y reportes de un establecimiento comercial. 
+El sistema cuenta con diferentes niveles de acceso (administrador y vendedor) y funcionalidades robustas para la gestión de productos, facturación e inventario.
 
 Características Principales
 🔐 Sistema de Autenticación
@@ -77,19 +78,7 @@ c
 #include <windows.h>
 #include <time.h>
 #include <string.h>
-Instalación y Compilación
-Clonar el repositorio
-
-bash
-git clone https://github.com/tuusuario/puntofast.git
-cd puntofast
-Compilar el programa
-
-bash
-gcc -o puntofast puntofast.c
-Ejecutar el programa
-
-bash
+===DATOS PARA EL USO===
 puntofast.exe
 Credenciales de Acceso
 Administrador
@@ -121,6 +110,8 @@ Apertura/cierre de caja
 
 No puede modificar precios ni stock
 
+=====FUNCIONES=====
+
 eliminarProducto(): Elimina productos del sistema
 
 redefinirPrecio(): Modifica precios
@@ -143,7 +134,7 @@ ordenarPorCodigo(): Ordena productos
 
 ordenarPorNombre(): Ordena alfabéticamente
 
-Configuración
+======Configuración======
 cambiarIVA(): Modifica porcentaje de IVA
 
 cambiarBajoStock(): Define límite de stock mínimo
@@ -176,43 +167,13 @@ Mensajes de error descriptivos
 
 Formato de salida claro y legible
 
-Limitaciones Conocidas
+====Limitaciones Conocidas=====
 Capacidad máxima: 100 productos y 50 ítems por carrito
 
 Requiere reinicio para aplicar algunos cambios de configuración
 
 Solo funciona en sistemas Windows por el uso de windows.h
 
-Mejoras Futuras
-Interfaz gráfica
-
-Backup automático
-
-Reportes en PDF
-
-Soporte multi-usuario simultáneo
-
-Integración con impresoras fiscales
-
-Contribuciones
-Este proyecto está abierto a contribuciones. Por favor, sigue estos pasos:
-
-Haz un fork del repositorio
-
-Crea una rama para tu feature (git checkout -b feature/AmazingFeature)
-
-Commit tus cambios (git commit -m 'Add some AmazingFeature')
-
-Push a la rama (git push origin feature/AmazingFeature)
-
-Abre un Pull Request
 
 Licencia
-Este proyecto está bajo la Licencia MIT. Ver el archivo LICENSE para más detalles.
-
-Contacto
-Para preguntas o soporte, contacta al equipo de desarrollo:
-
-Email: desarrollo@puntofast.com
-
-Sitio web: www.puntofast.com
+Este proyecto NO TIENE LICENCIA actualmente
