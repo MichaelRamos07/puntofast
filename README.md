@@ -1,13 +1,236 @@
-# 🚀 Punto Fast - Simulador de Ventas
+PuntoFast - Sistema de Punto de Venta
+Descripción del Proyecto
+PuntoFast es un sistema de punto de venta desarrollado en lenguaje C para la gestión de inventario, ventas y reportes de un establecimiento comercial. El sistema cuenta con diferentes niveles de acceso (administrador y vendedor) y funcionalidades robustas para la gestión de productos, facturación e inventario.
 
-## 📋 Tabla de Contenidos
-- [🚀 Instalación](#-instalación)
-- [📖 Uso](#-uso)                  <!-- Así enlazas a la sección USO -->
-- [🔧 Configuración](#-configuración)
-- [📊 Ejemplos](#-ejemplos)
+Características Principales
+🔐 Sistema de Autenticación
+Administrador: Acceso completo a todas las funcionalidades del sistema
 
----
+Vendedor: Funciones limitadas a ventas y consulta de productos
 
-## 🚀 Instalación
-```bash
-pip install punto-fast
+📦 Gestión de Productos
+Crear, eliminar y modificar productos
+
+Asignar códigos automáticamente
+
+Definir precios y stock
+
+Búsqueda por código o nombre
+
+Ordenamiento por código o nombre
+
+💰 Módulo de Ventas
+Proceso de venta con múltiples productos
+
+Cálculo automático de IVA configurable
+
+Generación de facturas con ID único
+
+Gestión de carrito de compras
+
+Control de stock en tiempo real
+
+📊 Inventario y Reportes
+Control de stock con alertas de bajo inventario
+
+Reportes de ventas por día
+
+Consulta de facturas por ID
+
+Configuración de límite de stock mínimo
+
+💼 Gestión de Caja
+Apertura y cierre de caja diario
+
+Numeración automática de días
+
+Persistencia de datos entre sesiones
+
+Estructura del Proyecto
+Archivos Principales
+text
+puntofast.c              # Código fuente principal
+productos.csv           # Base de datos de productos
+facturas.csv            # Registro de ventas
+config.csv              # Configuración del sistema
+README.md              # Documentación del proyecto
+Estructuras de Datos
+Producto: código, nombre, stock, precio
+
+FacturaDetalle: información completa de ventas
+
+ItemCarrito: productos en proceso de venta
+
+ResumenProducto: datos para reportes
+
+Requisitos del Sistema
+Software
+Compilador C (GCC, MinGW, etc.)
+
+Sistema operativo Windows
+
+Terminal con soporte UTF-8
+
+Librerías Utilizadas
+c
+#include <stdio.h>
+#include <windows.h>
+#include <time.h>
+#include <string.h>
+Instalación y Compilación
+Clonar el repositorio
+
+bash
+git clone https://github.com/tuusuario/puntofast.git
+cd puntofast
+Compilar el programa
+
+bash
+gcc -o puntofast puntofast.c
+Ejecutar el programa
+
+bash
+puntofast.exe
+Credenciales de Acceso
+Administrador
+Cédula: 1724665730
+
+Contraseña: MDRO.2007
+
+Vendedor
+Contraseña: PUNTOFAST.001
+
+Funcionalidades por Rol
+👨‍💼 Administrador
+Catálogo completo de productos
+
+Gestión de inventario
+
+Reportes detallados
+
+Configuración del sistema
+
+Cambio de IVA y límites de stock
+
+👨‍💼 Vendedor
+Consulta de productos
+
+Proceso de ventas
+
+Apertura/cierre de caja
+
+No puede modificar precios ni stock
+
+Formatos de Archivo
+productos.csv
+text
+codigo,nombre,stock,precio
+101,PRODUCTO1,50,10.50
+102,PRODUCTO2,30,25.00
+facturas.csv
+text
+facturaID,fecha,hora,dia,codigo,nombre,cantidad,precioUnitario,subtotal,iva,totalFactura
+1,2024-01-27,14:30:00,1,101,PRODUCTO1,2,10.50,21.00,2.52,23.52
+config.csv
+text
+iva,numeroDia,facturaActual,limitestock
+12,1,101,10
+Funciones Principales
+Gestión de Productos
+crearProducto(): Registra nuevos productos
+
+eliminarProducto(): Elimina productos del sistema
+
+redefinirPrecio(): Modifica precios
+
+mostrarProductos(): Lista todos los productos
+
+Ventas
+venderCarrito(): Proceso completo de venta
+
+guardarFactura(): Almacena datos de venta
+
+mostrarFacturaPorID(): Consulta facturas específicas
+
+Inventario
+cambiarStock(): Modifica cantidad en inventario
+
+bajoStock(): Muestra alertas de inventario bajo
+
+ordenarPorCodigo(): Ordena productos
+
+ordenarPorNombre(): Ordena alfabéticamente
+
+Configuración
+cambiarIVA(): Modifica porcentaje de IVA
+
+cambiarBajoStock(): Define límite de stock mínimo
+
+abrirCaja(): Inicia jornada comercial
+
+cerrarCaja(): Finaliza día de ventas
+
+Consideraciones Técnicas
+Persistencia de Datos
+Todos los datos se guardan en archivos CSV
+
+Configuración se mantiene entre ejecuciones
+
+Sistema numérico automático para facturas y días
+
+Validaciones
+Control de stock insuficiente
+
+Verificación de caja abierta para ventas
+
+Validación de credenciales
+
+Rango de valores para IVA (0-30%)
+
+Interfaz de Usuario
+Menús jerárquicos organizados
+
+Mensajes de error descriptivos
+
+Formato de salida claro y legible
+
+Limitaciones Conocidas
+Capacidad máxima: 100 productos y 50 ítems por carrito
+
+Requiere reinicio para aplicar algunos cambios de configuración
+
+Solo funciona en sistemas Windows por el uso de windows.h
+
+Mejoras Futuras
+Interfaz gráfica
+
+Backup automático
+
+Reportes en PDF
+
+Soporte multi-usuario simultáneo
+
+Integración con impresoras fiscales
+
+Contribuciones
+Este proyecto está abierto a contribuciones. Por favor, sigue estos pasos:
+
+Haz un fork del repositorio
+
+Crea una rama para tu feature (git checkout -b feature/AmazingFeature)
+
+Commit tus cambios (git commit -m 'Add some AmazingFeature')
+
+Push a la rama (git push origin feature/AmazingFeature)
+
+Abre un Pull Request
+
+Licencia
+Este proyecto está bajo la Licencia MIT. Ver el archivo LICENSE para más detalles.
+
+Contacto
+Para preguntas o soporte, contacta al equipo de desarrollo:
+
+Email: desarrollo@puntofast.com
+
+Sitio web: www.puntofast.com
