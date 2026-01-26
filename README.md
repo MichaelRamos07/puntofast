@@ -4,7 +4,9 @@ PuntoFast es un sistema de punto de venta desarrollado en lenguaje C para la ges
 El sistema cuenta con diferentes niveles de acceso (administrador y vendedor) y funcionalidades robustas para la gestión de productos, facturación e inventario.
 
 Características Principales
+
 🔐 Sistema de Autenticación
+
 Administrador: Acceso completo a todas las funcionalidades del sistema
 
 Vendedor: Funciones limitadas a ventas y consulta de productos
