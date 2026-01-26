@@ -50,12 +50,11 @@ Persistencia de datos entre sesiones
 Estructura del Proyecto
 Archivos Principales
 text
-puntofast.c              # Código fuente principal
-productos.csv           # Base de datos de productos
-facturas.csv            # Registro de ventas
-config.csv              # Configuración del sistema
-README.md              # Documentación del proyecto
-Estructuras de Datos
+puntofast.c      
+productos.csv           
+facturas.csv            
+config.csv              
+===ESTRUCTURA DE DATOS===
 Producto: código, nombre, stock, precio
 
 FacturaDetalle: información completa de ventas
