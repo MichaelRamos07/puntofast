@@ -55,6 +55,7 @@ productos.csv
 facturas.csv            
 config.csv              
 ===ESTRUCTURA DE DATOS===
+
 Producto: código, nombre, stock, precio
 
 FacturaDetalle: información completa de ventas
