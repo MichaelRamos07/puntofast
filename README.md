@@ -212,5 +212,10 @@ Requiere reinicio para aplicar algunos cambios de configuración
 Solo funciona en sistemas Windows por el uso de windows.h
 
 
-Licencia
+LICENCIA
+--------------
 Este proyecto NO TIENE LICENCIA actualmente
+
+AUTORES
+-----------------
+Jefferson Garcia, Michael Ramos estudiantes de primer semestre de INGENIERIA EN CIENCIA DE DATOS E IA de la Escuela Politecnica Nacional
