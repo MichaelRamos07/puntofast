@@ -56,7 +56,7 @@ typedef struct {
     int cantidad;
     float precioUnitario;
 } ItemCarrito;
-void limpiarBuffer();
+void eliminarSalto();
 void guardaConfiguracion(void); 
 void buscarProductosPorNombre();
 void buscarProductosPorCodigo();
@@ -502,7 +502,7 @@ void eliminarProducto() {
     }
     
     int codigo;
-    printf("\n=== ELIMINAR PRODUCTO ===\n");
+    printf("\n=== 2NAR PRODUCTO ===\n");
     
     // Mostrar productos actuales
     printf("Productos actuales:\n");
@@ -513,7 +513,7 @@ void eliminarProducto() {
     
     printf("\nIngrese código del producto a eliminar: ");
     scanf("%d", &codigo);
-    limpiarBuffer();
+    eliminarSalto();
     
     // Buscar producto
     int posicion = -1;
@@ -538,7 +538,7 @@ void eliminarProducto() {
     char respuesta;
     printf("\n¿Está seguro de eliminar este producto? (s = si/n = no): ");
     scanf(" %c", &respuesta);
-    limpiarBuffer();
+    eliminarSalto();
     
     if (respuesta != 's' && respuesta != 'S') {
         printf("Eliminación cancelada.\n");
@@ -575,6 +575,7 @@ void cambiarBajoStock() {
 
     limiteStock = nuevoLimite;
     printf("Límite actualizado a %d unidades.\n", limiteStock);
+    guardaConfiguracion();
 }
 
 void mostrarProductos() {
@@ -629,11 +630,11 @@ void redefinirPrecio() {
     }
 }
 void guardaConfiguracion() {
-    FILE *f = fopen("config.csv", "w"); // reescribe todo
+    FILE *f = fopen("config.csv", "w"); 
     if (f == NULL) return;
 
-    fprintf(f, "iva,numeroDia,facturaActual\n");
-    fprintf(f, "%d,%d,%d\n", ivaGlobal, numeroDia, facturaActual);
+    fprintf(f, "iva,numeroDia,facturaActual,limitestock\n");
+    fprintf(f, "%d,%d,%d,%d\n", ivaGlobal, numeroDia, facturaActual, limiteStock);
 
     fclose(f);
 }
@@ -734,11 +735,14 @@ void cargarConfig() {
     token = strtok(NULL, ",");
     facturaActual = atoi(token);
 
+    token = strtok(NULL, ",");
+    limiteStock = atoi(token);
+
     fclose(f);
 }
 
 
-void limpiarBuffer() {
+void eliminarSalto() {
     int c;
     while ((c = getchar()) != '\n' && c != EOF);
 }
@@ -938,7 +942,6 @@ int main() {
     char ci[11] = "1724665730";
     char admincontrasena[15];
     char adminpassword[15]="MDRO.2007";
-    char nombre[50];
     char usuariopassword[50]="PUNTOFAST.001";
     char usuariocontrasena[50];
     do{
@@ -973,10 +976,10 @@ int main() {
                         printf("\n1. Catálogo de productos") ;
                         printf("\n2. Inventario") ;
                         printf("\n3. Reporte") ;
-                        printf("\n4. Cerrar sesion") ;
+                        printf("\n4. Cerrar sesión") ;
                         printf("\nIngrese la opción a la que desea acceder:") ;
                         scanf("%d", &opc) ;
-                        limpiarBuffer();
+                        eliminarSalto();
                         switch (opc) {
                             case 1:
                                 do {
@@ -992,7 +995,7 @@ int main() {
                                     printf("\n8. Regresar") ;
                                     printf("\nIngrese la opcion a la que desea ingresar:") ;
                                     scanf("%d", &opci) ;
-                                    limpiarBuffer();
+                                    eliminarSalto();
                                     switch (opci) {
                                         case 1:
                                             crearProducto();
@@ -1027,13 +1030,13 @@ int main() {
                                     printf("\n-------INVENTARIO-------");
                                     printf("\n1. Aumentar o disminuir stock");
                                     printf("\n2. Mostrar stock de productos");
-                                    printf("\n3.Cambiar bajo stock");
+                                    printf("\n3. Cambiar bajo stock");
                                     printf("\n4. Ordenar productos por codigo(menor a myaor)");
                                     printf("\n5. Ordenar productos por nombre(A-Z)");
                                     printf("\n6. Regresar") ;
                                     printf("\nIngrese la opcion a la que desea ingresar:") ;
                                     scanf("%d", &opci) ;
-                                    limpiarBuffer();
+                                    eliminarSalto();
                                     switch (opci) {
                                         case 1:
                                             cambiarStock() ;
@@ -1110,17 +1113,14 @@ int main() {
         }else if(rol == 2){
             do{
                 printf("\n----VENDEDOR----\n");
-                printf("Ingrese su Nombre y contraseña\n");
-                printf("Ingrese -1 en contraseña si desea cambiar de usuario\n");
-                printf("Nombre: ");
-                fgets(nombre, sizeof(nombre), stdin);
+                printf("Ingrese 0 en contraseña si desea cambiar de usuario\n");
                 printf("CONTRASEÑA: ");
                 fgets(usuariocontrasena, sizeof(usuariocontrasena), stdin);
                 usuariocontrasena[strcspn(usuariocontrasena, "\n")] = '\0';
                 
-                if(atoi(usuariocontrasena) == -1){
+                if(strcmp(usuariocontrasena, "0") == 0){
                     break;
-                }
+                }   
                 if(strcmp(usuariocontrasena,usuariopassword) == 0){
                     printf("INGRESO CORRECTO A VENDEDOR\n");
                     
@@ -1132,7 +1132,7 @@ int main() {
                         printf("\n4. Cerrar sesion") ;
                         printf("\nIngrese la opción a la que desea acceder:") ;
                         scanf("%d", &opc) ;
-                        limpiarBuffer();
+                        eliminarSalto();
                         switch (opc) {
                             case 1:
                                 do {
@@ -1144,7 +1144,7 @@ int main() {
                                     printf("\n4. Regresar") ;
                                     printf("\nIngrese la opcion a la que desea ingresar:") ;
                                     scanf("%d", &opci) ;
-                                    limpiarBuffer();
+                                    eliminarSalto();
                                     switch (opci) {
                                         case 1:
                                             buscarProductosPorCodigo();
