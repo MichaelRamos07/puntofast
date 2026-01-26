@@ -121,24 +121,6 @@ Apertura/cierre de caja
 
 No puede modificar precios ni stock
 
-Formatos de Archivo
-productos.csv
-text
-codigo,nombre,stock,precio
-101,PRODUCTO1,50,10.50
-102,PRODUCTO2,30,25.00
-facturas.csv
-text
-facturaID,fecha,hora,dia,codigo,nombre,cantidad,precioUnitario,subtotal,iva,totalFactura
-1,2024-01-27,14:30:00,1,101,PRODUCTO1,2,10.50,21.00,2.52,23.52
-config.csv
-text
-iva,numeroDia,facturaActual,limitestock
-12,1,101,10
-Funciones Principales
-Gestión de Productos
-crearProducto(): Registra nuevos productos
-
 eliminarProducto(): Elimina productos del sistema
 
 redefinirPrecio(): Modifica precios
