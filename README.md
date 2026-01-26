@@ -64,8 +64,8 @@ ItemCarrito: productos en proceso de venta
 
 ResumenProducto: datos para reportes
 
-Requisitos del Sistema
-Software
+Requisitos del Sistema  
+Software  
 Compilador C (GCC, MinGW, etc.)
 
 Sistema operativo Windows
@@ -75,11 +75,15 @@ Terminal con soporte UTF-8
 Librerías Utilizadas
 c
 #include <stdio.h>
+
 #include <windows.h>
+
 #include <time.h>
+
 #include <string.h>
+
 ===DATOS PARA EL USO===
-puntofast.exe
+
 Credenciales de Acceso
 Administrador
 Cédula: 1724665730
