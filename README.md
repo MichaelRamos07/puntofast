@@ -70,7 +70,7 @@ facturas.csv
 
 config.csv              
 
-===ESTRUCTURA DE DATOS===
+ESTRUCTURA DE DATOS 👾
 --------------------------------------------------------------
 Producto: código, nombre, stock, precio
 
@@ -80,7 +80,7 @@ ItemCarrito: productos en proceso de venta
 
 ResumenProducto: datos para reportes
 
-Requisitos del Sistema
+Requisitos del Sistema ⚙️
 -----------------------------------------------------------------------
 
 Software:  
@@ -90,8 +90,7 @@ Sistema operativo Windows
 
 Terminal con soporte UTF-8
 
-Librerías Utilizadas
-c
+Librerías Utilizadas de C 📚
 ------------------------------------------------------------------------
 #include <stdio.h>
 
@@ -101,25 +100,25 @@ c
 
 #include <string.h>
 
-===DATOS PARA EL USO===
+DATOS PARA EL USO 🔐
 --------------------------------------------
 Credenciales de Acceso
 
-Administrador
+**Administrador**
 
 Cédula: 1724665730
 
 Contraseña: MDRO.2007
 
 
-Vendedor
+**Vendedor**
 
 Contraseña: PUNTOFAST.001
 
-Funcionalidades por Rol
+> Funcionalidades por Rol
 
 👨‍💼 Administrador
---------------------------------------------------------------------------------
+---
 Catálogo completo de productos
 
 Gestión de inventario
@@ -131,7 +130,7 @@ Configuración del sistema
 Cambio de IVA y límites de stock
 
 👨‍💼 Vendedor
-------------------------------------------------------------------------------------
+---
 Consulta de productos
 
 Proceso de ventas
@@ -140,7 +139,7 @@ Apertura/cierre de caja
 
 No puede modificar precios ni stock
 
-=====FUNCIONES=====
+FUNCIONES 🪄
 -----------------------------------------------
 eliminarProducto(): Elimina productos del sistema
 
@@ -148,7 +147,7 @@ redefinirPrecio(): Modifica precios
 
 mostrarProductos(): Lista todos los productos
 
-=======Ventas======
+Ventas 🛒
 --------------------------------------------
 venderCarrito(): Proceso completo de venta
 
@@ -165,7 +164,7 @@ ordenarPorCodigo(): Ordena productos
 
 ordenarPorNombre(): Ordena alfabéticamente
 
-======Configuración======
+Funciones de parametros
 -------------------------------------------------
 cambiarIVA(): Modifica porcentaje de IVA
 
@@ -175,8 +174,8 @@ abrirCaja(): Inicia jornada comercial
 
 cerrarCaja(): Finaliza día de ventas
 
-Consideraciones Técnicas
--------------------------------------
+Consideraciones Técnicas ✨
+--------
 Persistencia de Datos
 
 Todos los datos se guardan en archivos CSV
@@ -195,7 +194,7 @@ Validación de credenciales
 
 Rango de valores para IVA (0-30%)
 
-Interfaz de Usuario
+Interfaz de Usuario 📺
 --------------------------------------
 Menús jerárquicos organizados
 
@@ -203,7 +202,7 @@ Mensajes de error descriptivos
 
 Formato de salida claro y legible
 
-====Limitaciones Conocidas=====
+Limitaciones Conocidas
 -----------------------------------------------------------
 Capacidad máxima: 100 productos y 50 ítems por carrito
 
@@ -216,6 +215,6 @@ LICENCIA
 --------------
 Este proyecto NO TIENE LICENCIA actualmente
 
-AUTORES
+AUTORES ©️👥
 -----------------
 Jefferson Garcia, Michael Ramos estudiantes de primer semestre de INGENIERIA EN CIENCIA DE DATOS E IA de la Escuela Politecnica Nacional
